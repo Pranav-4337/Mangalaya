@@ -1,0 +1,728 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+.head {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98vh;
+  /* max-width: 800px; */
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.head1 {
+  gap: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  /* max-width: 800px; */
+  padding: 15px;
+  /* background: white; */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+h1 {
+  font-family: "Berkshire Swash", serif;
+  text-decoration: overline;
+  font-size: 5rem;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Access Buttons */
+.access {
+  display: flex;
+  gap: 20px;
+  margin-top: 200px;
+}
+
+.enter {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  width: 100px;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.enter a {
+  color: white;
+  text-decoration: none;
+}
+.enter:hover {
+  background: linear-gradient(135deg, #0056b3, #003580);
+  transform: translateY(-3px);
+}
+
+/* Librarian Question Box */
+.question-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.question-box input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.question-box button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.question-box button:hover {
+  background: #0056b3;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode .head {
+  background: #333;
+}
+.dark-mode .head1 {
+  background: #333;
+}
+
+.dark-mode .enter {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+.dark-mode .enter:hover {
+  background: linear-gradient(135deg, #ff2b2b, #ff104c);
+}
+
+.dark-mode .question-box {
+  background: #444;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.adbok {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: linear-gradient(45deg, pink);
+
+  gap: 15px;
+}
+h2 {
+  text-decoration: overline;
+  margin-top: 50px;
+  margin-left: 40%;
+  font-size: 50px;
+}
+.adbok input {
+  font-family: "Tangerine", cursive;
+  width: 320px;
+  height: 40%;
+  border: double;
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: transparent;
+}
+
+.adbok button {
+  width: 90px;
+  height: 44%;
+  border: double;
+  border-radius: 2px;
+  background: #8ecae6;
+}
+table {
+  position: relative;
+
+  left: 20px;
+  height: fit-content;
+  width: 97%;
+  border-radius: 5px;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.bookList th {
+  height: 50px;
+  font-size: 2rem;
+  text-decoration: overline;
+  background: #023047;
+  text-align: center;
+  color: aliceblue;
+}
+th {
+  height: 50px;
+  font-size: 2rem;
+  text-decoration: overline;
+  background: #023047;
+  text-align: center;
+  color: aliceblue;
+  font-family: "Berkshire Swash", serif;
+}
+.bookList tr {
+  align-self: start;
+  border: 2px solid black;
+  background: #ffb703;
+  border-radius: 10px;
+}
+.bookList td {
+  font-family: "Tangerine", cursive;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+  color: rgb(41, 40, 40);
+}
+.bookList td button {
+  border: none;
+  height: 30px;
+  width: 100%;
+  background: #fb8500;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: rgb(210, 24, 24);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-decoration: overline;
+}
+#titled {
+  text-align: start;
+  left: 50px;
+  position: relative;
+  border-top: 1px dotted violet;
+}
+#authored {
+  text-align: start;
+  left: 150px;
+  position: relative;
+}
+/* Grid Layout for Books */
+#bookList1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Book Card */
+.book-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Book Image */
+.book-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Book Info */
+.book-info h3 {
+  font-family: "Tangerine", cursive;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.book-info p {
+  position: relative;
+  top: 15px;
+  font-family: "Berkshire Swash", serif;
+  /* font-weight: 100; */
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Add To Cart Button */
+.book-info button {
+  position: relative;
+  top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.book-info button:hover {
+  background-color: #0056b3;
+}
+/* Cart Container */
+#cartList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Cart Item Card */
+.cart-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Cart Image */
+.cart-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Cart Info */
+.cart-info h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.cart-info p {
+  font-family: "Tangerine", cursive;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.remove-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Total Price and Buy Now Section */
+.total-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.buy-all-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buy-all-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Message */
+.message {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.dark-mode .adbok {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: linear-gradient(45deg, pink);
+
+  gap: 15px;
+}
+.dark-mode h2 {
+  text-decoration: overline;
+  margin-top: 50px;
+  margin-left: 40%;
+  font-size: 50px;
+}
+.dark-mode .adbok input {
+  width: 320px;
+  height: 40%;
+  border: double;
+
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.dark-mode .adbok button {
+  width: 90px;
+  height: 44%;
+  border: double;
+  border-radius: 2px;
+  background: #8ecae6;
+}
+.dark-mode table {
+  position: relative;
+
+  left: 20px;
+  height: fit-content;
+  width: 97%;
+  border-radius: 5px;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.dark-mode .bookList th {
+  height: 50px;
+  font-size: 2rem;
+  text-decoration: overline;
+  background: #035882;
+
+  text-align: center;
+  color: rgb(236, 239, 241);
+}
+.dark-mode th {
+  height: 50px;
+  font-size: 2rem;
+  text-decoration: overline;
+  background: #023047;
+  text-align: center;
+  color: aliceblue;
+}
+.dark-mode .bookList tr {
+  align-self: start;
+  border: 2px solid rgb(230, 230, 230);
+  /* border: 2px solid black; */
+  background: #ffb803ca;
+  border-radius: 10px;
+}
+.dark-mode .bookList td {
+  /* font-size: 1.3rem; */
+  text-align: center;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+.dark-mode .bookList td button {
+  border: none;
+  height: 30px;
+  width: 100%;
+  background: #fb8600d7;
+
+  border-radius: 3px;
+  font-size: 1rem;
+  color: rgba(210, 24, 24, 0.77);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-decoration: overline;
+}
+.dark-mode #titled {
+  text-align: start;
+  left: 50px;
+  position: relative;
+  /* border-top: 1px dotted violet; */
+}
+.dark-mode #authored {
+  text-align: start;
+  left: 150px;
+  position: relative;
+}
+/* Grid Layout for Books */
+.dark-mode #bookList1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Book Card */
+.dark-mode .book-card {
+  background: #474545;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Book Image */
+.book-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Book Info */
+
+/* Add To Cart Button */
+.dark-mode .book-info button {
+  background-color: #2565aa;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.book-info button:hover {
+  background-color: #0056b3;
+}
+/* Cart Container */
+#cartList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Cart Item Card */
+.dark-mode .cart-card {
+  background: #2d2c2c;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Cart Image */
+.cart-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.dark-mode .remove-btn {
+  background-color: #dc3546c7;
+  color: rgb(19, 19, 19);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.remove-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Total Price and Buy Now Section */
+.dark-mode .total-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #1d1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dark-mode .buy-all-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buy-all-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Message */
+.message {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+.viewcart {
+  height: 50px;
+  width: 100px;
+  background: rgb(240, 182, 37);
+  border: none;
+  border-radius: 10px;
+}
+.dark-mode .userid {
+  margin-top: 100px;
+  height: 50px;
+  width: 800px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Tangerine", cursive;
+  font-weight: 900;
+  font-size: 50px;
+  background: rgba(209, 215, 215, 0.753) 0;
+  color: rgb(0, 0, 0);
+}
+.login {
+  margin-top: 30px;
+  font-family: "Berkshire Swash", serif;
+  font-size: 20px;
+  height: 40px;
+  width: 500px;
+  background: rgb(31, 165, 31);
+  border: none;
+  border-radius: 10px;
+}
+.userid {
+  margin-top: 100px;
+  height: 50px;
+  width: 800px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Tangerine", cursive;
+  font-weight: 900;
+  font-size: 50px;
+  background: #1d1e1ec0;
+  color: white;
+}
