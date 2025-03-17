@@ -285,13 +285,13 @@ th {
 }
 #titled {
   text-align: start;
-  left: 50px;
+  
   position: relative;
   border-top: 1px dotted violet;
 }
 #authored {
   text-align: start;
-  left: 150px;
+  
   position: relative;
 }
 /* Grid Layout for Books */
