@@ -105,7 +105,7 @@ function displayBooks() {
     bookCard.innerHTML = `
       <img src="${book.image || "default-book.jpg"}" alt="." class="book-image">
       <div class="book-info">
-        <h3>${book.title}</h3>
+        <h3 class="book-title">${book.title}</h3>
         <p><strong>Author:</strong> ${book.author}</p>
         <p><strong>Year:</strong> ${book.year}</p>
         <p><strong>Price:</strong> $${book.price}</p>
@@ -117,6 +117,27 @@ function displayBooks() {
   });
 
   console.log("📚 Books in library:", myLibrary.books);
+}
+document.addEventListener("DOMContentLoaded", displayBooks);
+  
+function searchBooks() {
+  let searchInput = document.getElementById("searchInput").value.toLowerCase();
+  let bookCards = document.querySelectorAll(".book-card");
+
+  bookCards.forEach((card) => {
+    let titleElement = card.querySelector(".book-title");
+
+    if (titleElement) {
+      // ✅ Check if title exists to prevent errors
+      let title = titleElement.textContent.toLowerCase();
+
+      if (title.includes(searchInput)) {
+        card.style.display = "block"; // Show matching books
+      } else {
+        card.style.display = "none"; // Hide non-matching books
+      }
+    }
+  });
 }
 
 function addcart(title) {
@@ -239,6 +260,7 @@ window.openCartPage = openCartPage;
 window.openuserpage = openuserpage;
 window.removeFromCart = removeFromCart;
 window.buyNow = buyNow;
+window.searchBooks = searchBooks;
 
 document.addEventListener("DOMContentLoaded", function () {
   let usernameInput = document.getElementById("username");

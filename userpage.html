@@ -18,11 +18,17 @@
   </head>
   <body>
     <div class="head1">
-      <button onclick="openCartPage()" class="viewcart">View Cart</button>
       <h1>Mangas in Alaya</h1>
       <button class="theme-toggle" onclick="toggleTheme()">
         <i id="themeIcon" class="bi bi-brightness-high"></i>
       </button>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search books..."
+        oninput="searchBooks()"
+      />
+      <button onclick="openCartPage()" class="viewcart">View Cart</button>
     </div>
     <table border="0">
       <thead></thead>

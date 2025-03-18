@@ -709,6 +709,21 @@ th {
   background: #1d1e1ec0;
   color: white;
 }
+
+#searchInput {
+  border: none;
+  border-radius: 3px;
+  height: 40px;
+  width: 20%;
+  font-family: "Tangerine", cursive;
+  font-size: 1.5rem;
+  background: #1d1e1e42;
+  color: rgb(0, 0, 0);
+}
+.dark-mode #searchInput {
+  background: #9a9d9d96;
+  color: rgb(0, 0, 0);
+}
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .head {
@@ -744,7 +759,9 @@ th {
     width: 100%;
     padding: 10px;
   }
-
+  #searchInput {
+    width: 80%;
+  }
   .head1 {
     width: 90%;
     flex-direction: column;
