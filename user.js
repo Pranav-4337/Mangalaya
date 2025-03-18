@@ -103,7 +103,7 @@ function displayBooks() {
     bookCard.classList.add("book-card");
 
     bookCard.innerHTML = `
-      <img src="${book.image || "default-book.jpg"}" alt="." class="book-image">
+      <img src="${book.image || "default-book.jpg"}" alt="." class="book-image" loading="lazy">
       <div class="book-info">
         <h3 class="book-title">${book.title}</h3>
         <p><strong>Author:</strong> ${book.author}</p>
