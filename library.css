@@ -197,13 +197,14 @@ h1 {
 .adbok {
   margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100px;
-  border-top: 2px solid rgb(0, 0, 0);
-  border-bottom: 2px solid rgb(0, 0, 0);
-  background: linear-gradient(45deg, pink);
+  width: 50%;
+  height: fit-content;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
   transition: background 0.3s ease, transform 0.3s ease;
 
   gap: 15px;
@@ -216,24 +217,52 @@ h2 {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .adbok input {
+  margin: 15px;
   font-family: "Tangerine", cursive;
-  width: 320px;
-  height: 40%;
+  width: 90%;
+  height: 15%;
   border: double;
-  font-size: 2rem;
+  border-radius: 5px;
+  font-size: 2.5rem;
   font-weight: 900;
   background-color: transparent;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .adbok button {
-  width: 90px;
-  height: 44%;
+  font-family: "Berkshire Swash", serif;
+  width: 70%;
+  height: 90px;
   border: double;
-  border-radius: 2px;
-  background: #8ecae6;
+  border-radius: 5px;
+  background: rgb(240, 182, 37);
   transition: background 0.3s ease, transform 0.3s ease;
 }
+.adbok button:hover {
+  background: rgba(240, 182, 37, 0.822);
+  cursor: pointer;
+}
+
+.book-ad {
+  font-family: "Berkshire Swash", serif;
+
+  font-size: 2.2rem;
+  color: white;
+  /* height: 200px; */
+  margin-top: 30px;
+  padding: 20px;
+  width: 300px;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.book-ad:hover {
+  background: #007bffdc;
+  color: rgba(255, 255, 255, 0.867);
+}
+
 table {
   position: relative;
 
@@ -242,41 +271,43 @@ table {
   width: 97%;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease;
-
+  margin-top: 40px;
   backdrop-filter: blur(10px);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .bookList th {
+  padding-top: 10px;
   height: 50px;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   text-decoration: overline;
-  background: #023047;
+  background: #daddd8;
   text-align: center;
-  color: aliceblue;
+  color: rgb(9, 9, 9);
   transition: background 0.3s ease, transform 0.3s ease;
 }
+
 th {
   height: 50px;
-  font-size: 1.5sssrem;
+  font-size: 2.5rem;
   text-decoration: overline;
-  background: #023047;
   text-align: center;
-  color: aliceblue;
+  color: rgb(12, 12, 13);
+  letter-spacing: 3px;
   transition: background 0.3s ease, transform 0.3s ease;
-
-  font-family: "Berkshire Swash", serif;
+  font-family: "Tangerine", cursive;
+  font-weight: 900;
 }
 .bookList tr {
+  background: #ecebe4;
   align-self: start;
   border: 2px solid black;
-  background: #ffb703;
+
   border-radius: 10px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .bookList td {
-  font-family: "Tangerine", cursive;
-  font-weight: 900;
+  font-family: "Berkshire Swash", serif;
   font-size: 1.5rem;
   text-align: center;
   position: relative;
@@ -288,11 +319,11 @@ th {
   height: 50px;
   overflow: hidden;
   width: 100%;
-  background: #fb8500;
+  background: #1c1c1c;
   border-radius: 3px;
   font-family: "Berkshire Swash", serif;
   font-size: 1rem;
-  color: rgb(210, 24, 24);
+  color: rgb(173, 169, 169);
   letter-spacing: 2px;
   text-decoration: overline;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -302,10 +333,11 @@ th {
   transition: background 0.3s ease, transform 0.3s ease;
 
   position: relative;
-  border-top: 1px dotted violet;
+  padding: 20px;
 }
 #authored {
   text-align: start;
+  padding: 20px;
 
   position: relative;
 }
@@ -343,18 +375,19 @@ th {
 
 /* Book Info */
 .book-info h3 {
-  font-family: "Tangerine", cursive;
-  font-weight: 900;
+  font-family: "Berkshire Swash", serif;
+  /* font-weight: 900; */
   font-size: 2rem;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .book-info p {
+  font-family: "Tangerine", cursive;
   position: relative;
   top: 15px;
-  font-family: "Berkshire Swash", serif;
   /* font-weight: 100; */
-  font-size: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   transition: background 0.3s ease, transform 0.3s ease;
 
   margin: 5px 0;
@@ -510,48 +543,35 @@ th {
 .dark-mode table {
   position: relative;
 
-  /* left: 10px; */
-  height: fit-content;
-  width: 97%;
-  border-radius: 5px;
-
   backdrop-filter: blur(10px);
   box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 .dark-mode .bookList th {
   text-decoration: overline;
-  background: #035882;
-
+  background: #303030;
   text-align: center;
   color: rgb(236, 239, 241);
 }
-.dark-mode th {
+/* .dark-mode th {
   text-decoration: overline;
-  background: #023047;
+
   text-align: center;
   color: aliceblue;
-}
+} */
 .dark-mode .bookList tr {
   align-self: start;
   border: 2px solid rgb(230, 230, 230);
   /* border: 2px solid black; */
-  background: #ffb803de;
   border-radius: 10px;
 }
 .dark-mode .bookList td {
-  /* font-size: 1.3rem; */
-  text-align: center;
-  position: relative;
   color: rgb(0, 0, 0);
+  background: gray;
 }
 .dark-mode .bookList td button {
-  background: #fb8600d7;
-
   color: rgba(210, 24, 24, 0.77);
-
-  letter-spacing: 2px;
-  text-decoration: overline;
+  background: #ecebe48c;
 }
 
 /* Book Card */
@@ -722,7 +742,7 @@ th {
 }
 .dark-mode #searchInput {
   background: #9a9d9d96;
-  color: rgb(0, 0, 0);
+  color: rgb(237, 237, 237);
 }
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -786,11 +806,13 @@ th {
     height: auto;
     padding: 10px;
     text-align: center;
+    width: 90%;
   }
 
   .adbok input {
     width: 90%;
-    font-size: 1.5rem;
+    height: 40px;
+    font-size: 1rem;
   }
 
   .adbok button {
@@ -800,9 +822,11 @@ th {
   }
   .bookList th {
     font-size: 1.5rem;
+    letter-spacing: 2px;
   }
   .bookList td {
-    font-weight: 500;
+    /* font-weight: 500; */
+    font-size: 1rem;
   }
   #titled,
   #authored {
@@ -822,6 +846,7 @@ th {
 
   .book-image {
     height: 200px;
+    object-fit: contain;
   }
 
   .cart-image {
@@ -841,23 +866,32 @@ th {
   .head {
     padding: 8px;
   }
-
+  .book-ad {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    padding: 15px;
+    width: 250px;
+    background: #007bff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 900;
+  }
   .enter {
     font-size: 16px;
     padding: 10px;
   }
-  .bookList th {
-    font-size: 1rem;
-  }
-  .bookList td {
-    font-weight: 500;
+
+  .bookList button {
+    text-align: center;
+    /* padding: 30px; */
   }
   .book-info h3 {
     font-size: 1.5rem;
   }
 
   .book-info p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 
   .remove-btn,

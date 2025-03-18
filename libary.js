@@ -1,11 +1,12 @@
 import Library from "./books.js";
 
 class Book {
-  constructor(title, author, year, price) {
+  constructor(title, author, year, price, image) {
     (this.title = title),
       (this.author = author),
       (this.year = year),
-      (this.price = price);
+      (this.price = price),
+      (this.image = image);
   }
 }
 
@@ -41,24 +42,32 @@ const myLibrary = new Library();
 var Manager = new BookManager(myLibrary);
 
 function bookadd() {
+  window.location.href = "libraryadd.html";
+}
+
+function addbooks() {
+  console.log("book added");
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
   let year = parseInt(document.getElementById("year").value);
   let price = parseFloat(document.getElementById("price").value);
+  let image = document.getElementById("image").value;
 
-  if (title === "" || author === "" || year === "") {
+  if (title === "" || author === "" || year === "" || !image) {
     alert("Please fill in all fields.");
     return;
   }
 
-  var newBook = new Book(title, author, year, price);
+  var newBook = new Book(title, author, year, price, image);
   console.log(newBook);
   Manager.addBook(newBook);
+  window.location.href = "hogwarts.html";
 
   document.getElementById("title").value = "";
   document.getElementById("author").value = "";
   document.getElementById("year").value = "";
   document.getElementById("price").value = "";
+  document.getElementById("image").value = "";
 }
 
 function displayBooks() {
@@ -98,9 +107,6 @@ function removeBook(title) {
   myLibrary.saveToLocalStorage();
   displayBooks();
 }
-// const newb = library.books.some((book) => book.title === "Naruto");
-// console.log("maped books", newb);
-// console.log("books in library are\n", myLibrary.books);
 
 const searchBook = { title: "Naruto", author: "Kishimoto" };
 const exists = myLibrary.books.filter((book) =>
@@ -111,3 +117,4 @@ document.addEventListener("DOMContentLoaded", displayBooks);
 
 window.bookadd = bookadd;
 window.removeBook = removeBook;
+window.addbooks = addbooks;

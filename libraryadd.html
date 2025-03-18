@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="library.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="head1">
+      <h1>Mangas in Alaya</h1>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <i id="themeIcon" class="bi bi-brightness-high"></i>
+      </button>
+    </div>
+    <div class="adbok">
+      <input type="text" id="title" placeholder=" Enter Title" />
+      <input type="text" name="" id="author" placeholder="Enter Author" />
+      <input
+        type="number"
+        id="year"
+        min="1900"
+        max="2099"
+        placeholder="Enter Year"
+      />
+      <input type="number" id="price" placeholder="Enter Price" />
+      <input type="url" id="image" placeholder="Image URL" required />
+      <button onclick="addbooks()" >Add-Mangas</button><br />
+    </div>
+  </body>
+  <script type="module" src="libary.js"></script>
+  <script src="books.js"></script>
+  <script>
+    function toggleTheme() {
+      let body = document.body;
+      let themeIcon = document.getElementById("themeIcon");
+
+      // Toggle the theme
+      body.classList.toggle("dark-mode");
+
+      // Check the current mode and update localStorage
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        themeIcon.classList.remove("bi-brightness-high");
+        themeIcon.classList.add("bi-moon-stars-fill");
+      } else {
+        localStorage.setItem("theme", "light");
+        themeIcon.classList.remove("bi-moon-stars-fill");
+        themeIcon.classList.add("bi-brightness-high");
+      }
+    }
+
+    // Apply saved theme on page load
+    window.onload = function () {
+      let savedTheme = localStorage.getItem("theme");
+      let body = document.body;
+      let themeIcon = document.getElementById("themeIcon");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        themeIcon.classList.remove("bi-brightness-high");
+        themeIcon.classList.add("bi-moon-stars-fill");
+      } else {
+        body.classList.remove("dark-mode");
+        themeIcon.classList.remove("bi-moon-stars-fill");
+        themeIcon.classList.add("bi-brightness-high");
+      }
+    };
+  </script>
+</html>
