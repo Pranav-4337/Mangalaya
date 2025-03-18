@@ -204,6 +204,7 @@ h1 {
   border-top: 2px solid rgb(0, 0, 0);
   border-bottom: 2px solid rgb(0, 0, 0);
   background: linear-gradient(45deg, pink);
+  transition: background 0.3s ease, transform 0.3s ease;
 
   gap: 15px;
 }
@@ -212,6 +213,7 @@ h2 {
   margin-top: 50px;
   margin-left: 40%;
   font-size: 50px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 .adbok input {
   font-family: "Tangerine", cursive;
@@ -221,6 +223,7 @@ h2 {
   font-size: 2rem;
   font-weight: 900;
   background-color: transparent;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .adbok button {
@@ -229,6 +232,7 @@ h2 {
   border: double;
   border-radius: 2px;
   background: #8ecae6;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 table {
   position: relative;
@@ -237,6 +241,7 @@ table {
   height: fit-content;
   width: 97%;
   border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
 
   backdrop-filter: blur(10px);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
@@ -249,6 +254,7 @@ table {
   background: #023047;
   text-align: center;
   color: aliceblue;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 th {
   height: 50px;
@@ -257,6 +263,8 @@ th {
   background: #023047;
   text-align: center;
   color: aliceblue;
+  transition: background 0.3s ease, transform 0.3s ease;
+
   font-family: "Berkshire Swash", serif;
 }
 .bookList tr {
@@ -264,6 +272,7 @@ th {
   border: 2px solid black;
   background: #ffb703;
   border-radius: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 .bookList td {
   font-family: "Tangerine", cursive;
@@ -272,10 +281,12 @@ th {
   text-align: center;
   position: relative;
   color: rgb(41, 40, 40);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 .bookList td button {
   border: none;
-  height: 100%;
+  height: 50px;
+  overflow: hidden;
   width: 100%;
   background: #fb8500;
   border-radius: 3px;
@@ -284,9 +295,11 @@ th {
   color: rgb(210, 24, 24);
   letter-spacing: 2px;
   text-decoration: overline;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 #titled {
   text-align: start;
+  transition: background 0.3s ease, transform 0.3s ease;
 
   position: relative;
   border-top: 1px dotted violet;
@@ -302,6 +315,7 @@ th {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Book Card */
@@ -324,6 +338,7 @@ th {
   height: 250px;
   object-fit: cover;
   border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Book Info */
@@ -331,6 +346,7 @@ th {
   font-family: "Tangerine", cursive;
   font-weight: 900;
   font-size: 2rem;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .book-info p {
@@ -339,6 +355,8 @@ th {
   font-family: "Berkshire Swash", serif;
   /* font-weight: 100; */
   font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+
   margin: 5px 0;
 }
 
@@ -353,6 +371,8 @@ th {
   cursor: pointer;
   margin-top: 10px;
   border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+
   font-size: 14px;
 }
 
@@ -365,6 +385,7 @@ th {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Cart Item Card */
@@ -387,6 +408,7 @@ th {
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Cart Info */
@@ -395,12 +417,14 @@ th {
   font-size: 2rem;
   font-weight: 500;
   margin: 10px 0;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cart-info p {
   font-family: "Tangerine", cursive;
   font-size: 1rem;
   margin: 5px 0;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Remove Button */
@@ -414,10 +438,12 @@ th {
   border-radius: 5px;
   font-size: 14px;
   width: 100%;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .remove-btn:hover {
   background-color: #b02a37;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Total Price and Buy Now Section */
@@ -428,12 +454,14 @@ th {
   background: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .total-price {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .buy-all-btn {
@@ -444,6 +472,7 @@ th {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .buy-all-btn:hover {
@@ -455,6 +484,7 @@ th {
   text-align: center;
   font-size: 16px;
   color: #555;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 .dark-mode .adbok {
   border-top: 2px solid rgb(255, 255, 255);
@@ -506,7 +536,7 @@ th {
   align-self: start;
   border: 2px solid rgb(230, 230, 230);
   /* border: 2px solid black; */
-  background: #ffb803ca;
+  background: #ffb803de;
   border-radius: 10px;
 }
 .dark-mode .bookList td {
