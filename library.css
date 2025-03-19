@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Estonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -91,6 +94,8 @@ h1 {
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 18px;
+  font-family: "Grandiflora One", cursive;
+  font-weight: 900;
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
@@ -116,6 +121,8 @@ h1 {
   transform: translate(-50%, -50%);
   background: white;
   padding: 20px;
+  font-family: "Grandiflora One", cursive;
+
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -125,6 +132,8 @@ h1 {
 
 .question-box input {
   width: 80%;
+  font-family: "Tangerine", cursive;
+
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
@@ -139,6 +148,7 @@ h1 {
   cursor: pointer;
   border-radius: 5px;
   font-size: 14px;
+  font-family: "Berkshire Swash", serif;
 }
 
 .question-box button:hover {
@@ -244,14 +254,14 @@ h2 {
 }
 
 .book-ad {
-  font-family: "Berkshire Swash", serif;
+  font-family: "Grandiflora One", cursive;
 
   font-size: 2.2rem;
   color: white;
   /* height: 200px; */
   margin-top: 30px;
-  padding: 20px;
-  width: 300px;
+  padding: 15px;
+  width: 250px;
   background: #007bff;
   border: none;
   border-radius: 10px;
@@ -369,6 +379,8 @@ th {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -382,7 +394,7 @@ th {
 }
 
 .book-info p {
-  font-family: "Tangerine", cursive;
+  font-family: "Grandiflora One", cursive;
   position: relative;
   top: 15px;
   /* font-weight: 100; */
@@ -395,6 +407,8 @@ th {
 
 /* Add To Cart Button */
 .book-info button {
+  font-family: "Berkshire Swash", serif;
+
   position: relative;
   top: 10px;
   background-color: #007bff;
@@ -438,15 +452,15 @@ th {
 /* Cart Image */
 .cart-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 100px;
+  object-fit: contain;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Cart Info */
 .cart-info h3 {
-  font-family: "Tangerine", cursive;
+  font-family: "Berkshire Swash", serif;
   font-size: 2rem;
   font-weight: 500;
   margin: 10px 0;
@@ -454,7 +468,7 @@ th {
 }
 
 .cart-info p {
-  font-family: "Tangerine", cursive;
+  font-family: "Grandiflora One", cursive;
   font-size: 1rem;
   margin: 5px 0;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -462,6 +476,8 @@ th {
 
 /* Remove Button */
 .remove-btn {
+  font-family: "Berkshire Swash", serif;
+
   background-color: #dc3545;
   color: white;
   border: none;
@@ -491,6 +507,8 @@ th {
 }
 
 .total-price {
+  font-family: "Grandiflora One", cursive;
+
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -498,6 +516,8 @@ th {
 }
 
 .buy-all-btn {
+  font-family: "Berkshire Swash", serif;
+
   background-color: #28a745;
   color: white;
   border: none;
@@ -594,6 +614,7 @@ th {
   height: 250px;
   object-fit: cover;
   border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Book Info */
@@ -629,18 +650,6 @@ th {
   padding: 15px;
   text-align: center;
   transition: transform 0.3s ease;
-}
-
-.cart-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Cart Image */
-.cart-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
 }
 
 .dark-mode .remove-btn {
@@ -698,6 +707,8 @@ th {
 
 .viewcart {
   height: 50px;
+  font-family: "Berkshire Swash", serif;
+
   width: 100px;
   background: rgb(240, 182, 37);
   border: none;
@@ -736,13 +747,13 @@ th {
   height: 40px;
   width: 20%;
   font-family: "Tangerine", cursive;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: #1d1e1e42;
   color: rgb(0, 0, 0);
 }
 .dark-mode #searchInput {
   background: #9a9d9d96;
-  color: rgb(237, 237, 237);
+  color: rgb(0, 0, 0);
 }
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -886,12 +897,16 @@ th {
     text-align: center;
     /* padding: 30px; */
   }
+  .book-image {
+    box-shadow: none;
+  }
   .book-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .book-info p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 900;
   }
 
   .remove-btn,
